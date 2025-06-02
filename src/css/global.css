@@ -1,0 +1,249 @@
+/* Global Styles */
+#root {
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0 auto;
+  background-color: var(--root_background) !important;
+}
+
+/* Typography */
+h1, h2, h3, h5, h6, p {
+  color: var(--para-clr);
+}
+
+a {
+  color: var(--link_color);
+}
+
+/* Grid Layout */
+.grid {
+  margin: 0 auto;
+  max-width: 90%;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: flex-start;
+  padding: 3rem;
+  grid-template-columns: 0.5fr 0.5fr 0.5fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  background: var(--body_background);
+  align-items: stretch;
+  padding-top: 100px;
+  border-radius: .5rem;
+}
+
+.container {
+  margin-top: 11%;
+  max-width: 120rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  grid-template-rows: 1fr 1fr 1fr;
+  margin: 0 auto;
+  background-color: var(--body_background) !important;
+  color: var(--body_color) !important;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Dropdown Styles */
+.dropdown-item {
+  color: var(--para-clr) !important;
+}
+
+.dropdown-menu {
+  background-color: var(--card-bg-clr) !important;
+}
+
+.dropdown-item:hover {
+  color: var(--bs-dropdown-link-hover-color);
+  background-color: var(--category-hvr) !important;
+}
+
+/* HR Line */
+.hr-line {
+  width: 100%;
+  height: 1px;
+  background: var(--hr_line_card);
+}
+
+/* Center Container */
+.center-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: var(--para-clr);
+  transform: translate(-50%, -50%);
+  background-color: var(--body_background) !important;
+}
+
+.center-container .image-control {
+  display: block;
+  margin: 0 auto;
+  padding-top: 2rem;
+  background-color: var(--body_background);
+}
+
+/* Error State Styles */
+.error-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+  padding: 2rem;
+}
+
+.error-content {
+  background: white;
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+  animation: slideUp 0.5s ease;
+}
+
+.error-icon {
+  font-size: 4rem;
+  color: #ff6b6b;
+  margin-bottom: 1.5rem;
+  animation: pulse 2s infinite;
+}
+
+.error-content h2 {
+  color: #2c3e50;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.error-content p {
+  color: #666;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.error-details {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.error-detail-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.error-detail-item:last-child {
+  border-bottom: none;
+}
+
+.error-detail-item i {
+  font-size: 1.2rem;
+  color: #4a5568;
+  margin-right: 1rem;
+}
+
+.error-detail-item span {
+  color: #4a5568;
+  font-weight: 500;
+  flex-grow: 1;
+  text-align: left;
+}
+
+.status-indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-left: 1rem;
+}
+
+.status-indicator.offline {
+  background: #ff6b6b;
+  box-shadow: 0 0 10px rgba(255, 107, 107, 0.5);
+}
+
+.status-indicator.checking {
+  background: #ffd93d;
+  box-shadow: 0 0 10px rgba(255, 217, 61, 0.5);
+  animation: pulse 1.5s infinite;
+}
+
+.retry-button {
+  background: linear-gradient(45deg, #4ECDC4, #45b7af);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 15px rgba(78, 205, 196, 0.3);
+}
+
+.retry-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(78, 205, 196, 0.4);
+}
+
+.retry-button:active {
+  transform: translateY(0);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .error-content {
+    padding: 2rem;
+  }
+
+  .error-icon {
+    font-size: 3rem;
+  }
+
+  .error-content h2 {
+    font-size: 1.75rem;
+  }
+
+  .retry-button {
+    width: 100%;
+    justify-content: center;
+  }
+} 

@@ -1,0 +1,123 @@
+/* Button Styles */
+.buttons {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 10%;
+  text-align: center;
+}
+
+.btn-hover {
+  width: 150px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin: 10px;
+  height: 45px;
+  text-align: center;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 50px;
+  -moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.btn-hover:hover {
+  background-position: 100% 0;
+  -moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.btn-hover:focus {
+  outline: none;
+}
+
+.btn-hover.color-9 {
+  background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+  box-shadow: 0 3px 5px 0 rgba(65, 132, 234, 0.75);
+}
+
+/* More Button Styles */
+.bt {
+  width: 100px;
+  cursor: pointer;
+  position: relative;
+  font-family: "Roboto";
+  text-transform: uppercase;
+  color: #503af6;
+  letter-spacing: 0.5px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  outline: none;
+  text-decoration: none;
+  text-align: center;
+}
+
+.more-bt {
+  border-right: 2px solid #503af6;
+  border-bottom: 2px solid #503af6;
+  padding: 17px 29px 15px 31px;
+  border-color: #503af6;
+}
+
+.more-bt p {
+  font-size: 14px;
+}
+
+.more-bt:before {
+  left: 0;
+  bottom: 0;
+  height: calc(100% - 17px);
+  width: 2px;
+}
+
+.more-bt:after, .more-bt:before {
+  content: " ";
+  display: block;
+  background: #503af6;
+  position: absolute;
+  transition: .5s;
+  z-index: 10;
+}
+
+.more-bt:after {
+  top: 0;
+  right: 0;
+  width: calc(100% - 17px);
+  height: 2px;
+}
+
+.more-bt .fl, .more-bt .sfl {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  width: 0;
+  z-index: 2;
+  background: #503af6;
+  top: 0;
+  transition: .5s;
+  transition-delay: .1s;
+}
+
+.more-bt .sfl {
+  z-index: 1;
+  background: #4431D1;
+  transition: .7s;
+}
+
+.more-bt:hover:before, .more-bt:hover:after {
+  height: 100%;
+  width: 100%;
+}
+
+.more-bt:hover .fl, .more-bt:hover .sfl {
+  width: 100%;
+  transition-delay: 0s;
+} 
